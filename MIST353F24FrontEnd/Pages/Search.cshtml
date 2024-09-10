@@ -1,0 +1,20 @@
+﻿@page
+@model MIST353F24FrontEnd.Pages.SearchModel
+@{
+}
+<input id="searchfld" placeholder="honda" class="form-control" />
+
+<button typeof="button" onclick="searchManuf();" class="btn btn-primary" >Search</button>
+
+<div id="searchResultsDiv">
+
+
+</div>
+
+<script>
+    function searchManuf() {
+        let searchTerms = document.getElementById("searchfld").value;
+
+        document.getElementById("searchResultsDiv").innerHTML = "You searched for: " + searchTerms;
+    }
+</script>
