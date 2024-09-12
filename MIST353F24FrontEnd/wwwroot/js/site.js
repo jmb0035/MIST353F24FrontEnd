@@ -11,9 +11,15 @@
 
      let productNutrientLevels = data.product.nutrient_levels
 
-     for (let key in productNutrientLevels) {
+     let text = '<table class="table table-striped"><tr><th>Key</th>Value</th></tr>'
 
+     for (let key in productNutrientLevels) {
+         text += '<tr><td>$(key)</td><td>${productNutrientLevels[key]}</td></tr>'
      }
+
+     text += '</table>'
+
+     document.getElementById("output").innerHTML = text;
 
 }
 
